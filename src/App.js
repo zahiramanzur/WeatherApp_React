@@ -1,11 +1,13 @@
 import React from 'react';
+import WeatherLocation from './components/WeatherLocation';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Wheather app (aplicación del clima)
+      Weather app (aplicación del clima)
+      <WeatherLocation></WeatherLocation>
     </div>
   );
 }
