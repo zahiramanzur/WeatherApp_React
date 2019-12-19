@@ -1,10 +1,11 @@
 import React from 'react';
 
-const WeatherExtraInfo = ({humidity},{wind}) => (
-
+const WeatherExtraInfo = ({humidity , wind}) => (
+    /*(humidity)para colocar strings para q se muestren en pantalla utilizar(``)*/
+    ///template string (wind)
     <div>
-        <h1>{humidity}</h1>
-        <h2>{wind}</h2>
+        <span>{humidity + " " + "-"}</span>
+        <span>{`${wind} viento`}</span>
     </div>
 
 );
