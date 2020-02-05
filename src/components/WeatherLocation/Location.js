@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Location = ({city}) => (
 
@@ -9,6 +10,10 @@ const Location = ({city}) => (
     </div>
 
 );
+
+Location.propTypes = {
+    city: PropTypes.string.isRequired, //ptsr y tab para autocompletar
+};
 
 
 export default Location;
