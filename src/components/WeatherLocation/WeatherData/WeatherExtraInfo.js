@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 const WeatherExtraInfo = ({humidity , wind}) => (
     /*(humidity)para colocar strings para q se muestren en pantalla utilizar(``)*/
     ///template string (wind)
-    <div>
-        <span>{`${humidity}  - `}</span>
-        <span>{`${wind} viento`}</span>
+    <div className="weatherExtraInfoCont">
+        <span className="humidity">{`Humedad: ${humidity}`}</span> 
+        <span className="line">{ ` - `}</span>
+        <span className="wind">{`Viento: ${wind} `}</span>
     </div>
 
 );

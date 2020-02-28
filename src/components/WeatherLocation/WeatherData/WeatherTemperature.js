@@ -10,6 +10,7 @@ import {
     SNOW,
     WINDY
 }from '../../../constants/weathers'
+import './styles.css';
 
 //diccionario de iconos según el estado del clima
 const icons = {
@@ -25,22 +26,24 @@ const icons = {
 //función para traer un ícono según el estado del clima
 const getWeatherIcon = weatherState => {
     const icon = icons[weatherState];
+    const sizeIcon = "4x"
     if (icon)
-        return <WeatherIcons name={icon} size="2x" />
+        return <WeatherIcons className="wicon" name={icon} size={sizeIcon} />
     else
-        return <WeatherIcons name="day-sunny" size="2x" />
+        return <WeatherIcons className="wicon" name="day-sunny" size="2x" />
 }
 
 
 const WeatherTemperature = ({temperature , weatherState}) => (
 
-    <div>
+    <div className="weatherTemperatureCont">
         
         {
             getWeatherIcon(weatherState)//entre llaves porque se añade codigo js, el código llama a una función
         }
         
-        <span>{`${temperature} C°`}</span>
+        <span className="temperature">{`${temperature}` }</span>
+        <span className="temperatureType">{` C°`}</span>
         
     </div>
 
